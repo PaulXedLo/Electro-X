@@ -1,0 +1,217 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;700&family=Crimson+Pro:ital,wght@0,400;1,700&family=Work+Sans:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Albert Sans", sans-serif;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: black;
+  align-items: center;
+  height: 5rem;
+  gap: 2rem;
+  position: sticky;
+  width: 100%;
+}
+.navbar-list {
+  display: flex;
+  gap: 3rem;
+  list-style: none;
+}
+.navbar-list li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 700;
+}
+.navbar-list li a:hover {
+  color: gold;
+}
+.header {
+  height: 30rem;
+  background-color: black;
+  display: flex;
+  gap: 1.2rem;
+  flex-direction: row;
+}
+.header-info {
+  display: flex;
+  gap: 0.8rem;
+  flex-direction: column;
+}
+.header-text {
+  color: #fff;
+  margin-left: 5rem;
+  margin-top: 10rem;
+  font-size: 2rem;
+  animation-name: goToRight;
+  animation-duration: 2s;
+}
+.faq {
+  height: 60vh;
+  width: 100%;
+  background-color: black;
+  margin-top: 10rem;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(/public/e.jpg);
+  background-size: 19rem;
+  background-repeat: no-repeat;
+  background-position: right bottom;
+}
+.faqtext {
+  color: #fff;
+  margin-bottom: 4rem;
+  font-size: 3rem;
+}
+.search {
+  width: 30rem;
+  margin-left: 5rem;
+  animation-name: showUp;
+  animation-duration: 3s;
+}
+#accordion-flush {
+  width: 80rem;
+}
+.phonephoto {
+  align-self: flex-end;
+  position: absolute;
+  right: 0;
+  z-index: 0;
+  height: 35rem;
+  width: 50rem;
+  animation-name: showUp;
+  animation-duration: 3s;
+}
+
+.product-list {
+  height: 100vh;
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+/* MODAL STYLES */
+.modalinfo {
+  margin-top: auto;
+  gap: 10rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.modalmain {
+  display: flex;
+  flex-direction: column;
+}
+.copyright {
+  position: absolute;
+  bottom: 3rem;
+  left: 42%;
+}
+.closemodal {
+  position: absolute;
+  right: 1rem;
+  color: black;
+  font-weight: 700;
+  border-bottom: 2px solid black;
+}
+.modalcarousel {
+  width: 50rem;
+}
+.modalspecs {
+  flex-direction: column;
+}
+.modalspecs h2 {
+  font-size: 3.2rem;
+}
+
+/*Modal Styles ABOVE */
+.device-photo {
+  width: 10rem;
+  height: 10rem;
+}
+.product-item {
+  display: flex;
+  margin-top: 2rem;
+  margin-left: 2rem;
+  height: 10rem;
+  width: 19rem;
+  flex-direction: column;
+}
+.scroll {
+  width: 2rem;
+  height: 2rem;
+  position: fixed;
+  right: 1.2rem;
+  bottom: 2rem;
+  border: 2px solid black;
+  border-radius: 200px;
+  cursor: pointer;
+  transition: 1s;
+}
+.cartimg {
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+}
+.scroll:hover {
+  transform: translateY(-0.5rem);
+}
+.errorhd {
+  text-align: center;
+  font-size: 4rem;
+  margin-top: 10rem;
+}
+.notification-slider {
+  position: fixed;
+  top: 1rem;
+  right: -100%;
+  background-color: green;
+  color: white;
+  padding: 10px;
+  transition: right 0.3s ease-in-out;
+}
+.errorp {
+  margin-left: 9rem;
+}
+.modalimg {
+  width: 40rem;
+}
+.product-sort {
+  width: 10rem;
+  font-size: 1.2rem;
+  margin: 3rem auto auto;
+  border-bottom: 2px solid black;
+}
+@keyframes goToRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-20rem);
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes showUp {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
