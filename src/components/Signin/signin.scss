@@ -1,0 +1,29 @@
+$color_1: #fff;
+$color_2: gold;
+$color_3: black;
+$color_4: white;
+$font-family_1: "Albert Sans", sans-serif;
+$background-color_1: black;
+$background-color_2: #fff;
+$background-color_3: green;
+$signup-color: lightgrey;
+
+.signup {
+  background-color: $signup-color;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.signfooter {
+  background-color: black;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 11.4vh;
+}
+.signcopy {
+  color: $color_4;
+}

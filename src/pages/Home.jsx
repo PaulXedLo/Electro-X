@@ -10,7 +10,6 @@ import SignFooter from "../components/Signin/footer";
 
 export default function Home({ isSignedIn, handleLogout }) {
   const [search, setSearch] = useState("");
-  const [cartSize, setCartSize] = useState(0);
   const images = [
     {
       src: "https://lcdn.altex.ro/resize/media/catalog/product/t/e/2bd48d28d1c32adea0e55139a4e6434a/telefon_samsung_galaxy_s23_ultra_phantom_black_01_d653fc35.jpg",
@@ -41,18 +40,9 @@ export default function Home({ isSignedIn, handleLogout }) {
       additional: "Introduced the A17 Pro chip",
     },
   ];
-  useEffect(() => {
-    const storedItems = JSON.parse(localStorage.getItem("cartItems")) || [];
-    setCartSize(storedItems.length);
-  }, []);
-
   return (
     <>
-      <Navigation
-        cartSize={cartSize}
-        isSignedIn={isSignedIn}
-        handleLogout={handleLogout}
-      />
+      <Navigation isSignedIn={isSignedIn} handleLogout={handleLogout} />
       <Header setSearch={setSearch} search={search} />
       <Products setSearch={setSearch} search={search} />
       <FrequentlyAsked />

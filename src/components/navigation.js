@@ -1,47 +1,43 @@
-export default function Navigation({
-  cartSize,
-  isSignedIn,
-  handleLogout,
-  discount,
-}) {
+import { Link } from "react-router-dom";
+
+export default function Navigation({ isSignedIn, handleLogout }) {
   return (
     <div className="navbar-ol">
       <nav className="navbar">
         <ul className="navbar-list">
           <li>
-            <a href="/">Home</a>
+            <Link to="/">Home</Link>
           </li>
           {isSignedIn ? (
             <>
               <li>
-                <a href="/profile">
+                <Link to="/profile">
                   <i className="fas fa-user"></i> Profile
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/" onClick={handleLogout}>
+                <Link to="/" onClick={handleLogout}>
                   Log Out
-                </a>
+                </Link>
               </li>
             </>
           ) : (
             <li>
-              <a href="/signin">Sign Up</a>
+              <Link to="/signin">Sign Up</Link>
             </li>
           )}
           <li>
-            <a href="/support">Support</a>
+            <Link to="/support">Support</Link>
           </li>
         </ul>
         <div className="cart">
-          <a href="/cart" className="cart-link">
+          <Link to="/cart" className="cart-link">
             <img
               src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSI1-lBuH3Vxd6FcFez0vjEKjWLqgUDsPoOSwZ6WTw7W70rxaoGHZ7XBXl7X0DygKm3Iwg&usqp=CAU"
               alt="Cart"
               className="cartimg"
             />
-            {cartSize > 0 && <span className="cart-size">{cartSize}</span>}
-          </a>
+          </Link>
         </div>
       </nav>
     </div>

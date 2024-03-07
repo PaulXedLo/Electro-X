@@ -1,0 +1,106 @@
+$color_1: #fff;
+$color_2: gold;
+$color_3: black;
+$color_4: white;
+$font-family_1: "Albert Sans", sans-serif;
+$background-color_1: black;
+$background-color_2: #fff;
+$background-color_3: green;
+$signup-color: lightgrey;
+.supp {
+  height: 100vh;
+  background-color: $signup-color;
+}
+.supportinfobox {
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  width: 100vw;
+}
+.supportheader {
+  font-size: 3rem;
+  position: relative;
+  text-decoration: none;
+}
+
+.supportheader::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 5px;
+  background-color: black;
+  border-radius: 0 0 50% 50%;
+  box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.2);
+}
+.supportinfobox {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.supportform {
+  width: 100%;
+  margin-top: 2rem;
+}
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+textarea.form-control {
+  resize: vertical;
+}
+
+.btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+}
+.form-check {
+  display: flex;
+  gap: 0.5rem;
+}
+.form-check-label {
+  font-size: 14px;
+}
+.supportsend {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+.success-popup {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #4caf50;
+  color: white;
+  padding: 15px;
+  border-radius: 10px;
+  z-index: 9999;
+  animation: slide-up 0.5s ease-out;
+}
+.tos {
+  cursor: pointer;
+}

@@ -56,9 +56,7 @@ export default function Form({ isSignedIn, setIsSignedIn }) {
     navigate("/");
     setIsSignedIn(true);
   };
-  const handleSubmitForm = (e) => {
-    e.preventDefault();
-
+  const handleSubmitForm = () => {
     const isEmailValid = validateEmail();
     const isPasswordValid = validatePassword();
     const isConfirmPasswordValid = validateConfirmPassword();
@@ -186,12 +184,13 @@ export default function Form({ isSignedIn, setIsSignedIn }) {
             <p className="text-red-500 text-sm mt-1">{termsError}</p>
           )}
         </div>
-        <button
-          type="submit"
+        <a
+          href="/Electro-X"
+          onClick={handleSubmitForm}
           className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 ml-9"
         >
           Register new account
-        </button>
+        </a>
       </form>
     </div>
   );

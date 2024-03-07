@@ -1,8 +1,6 @@
 import { useState } from "react";
 import ChangePassword from "./ChangePassword";
 import EditInformation from "./EditInformation";
-import CurrentOrders from "./CurrentOrders";
-
 export default function Dashboard({ handleLogout }) {
   const [selectedOption, setSelectedOption] = useState("");
 
@@ -32,12 +30,6 @@ export default function Dashboard({ handleLogout }) {
           >
             Edit Information
           </li>
-          <li
-            onClick={() => handleOptionClick("Current Orders")}
-            className={selectedOption === "Current Orders" ? "selected" : ""}
-          >
-            Current Orders
-          </li>
           <a onClick={handleLogout} className="logout" href="/">
             Log Out
           </a>
@@ -46,7 +38,6 @@ export default function Dashboard({ handleLogout }) {
       <div className="selected_component">
         {selectedOption === "Change Password" && <ChangePassword />}
         {selectedOption === "Edit Information" && <EditInformation />}
-        {selectedOption === "Current Orders" && <CurrentOrders />}
       </div>
     </div>
   );

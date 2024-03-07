@@ -75,6 +75,7 @@ $signup-color: lightgrey;
 .header {
   height: 30rem;
   width: 100%;
+  text-align: center;
   background-color: $background-color_1;
   display: flex;
   gap: 1.2rem;
@@ -87,7 +88,7 @@ $signup-color: lightgrey;
 }
 .header-text {
   color: $color_1;
-  margin-left: 5rem;
+  margin-left: 0rem;
   margin-top: 10rem;
   font-size: 2rem;
   animation-name: goToRight;
@@ -152,6 +153,18 @@ $signup-color: lightgrey;
   justify-content: center;
   align-items: center;
 }
+body.modal-open {
+  overflow: hidden;
+}
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
+  z-index: 999; /* Ensure overlay is on top of everything */
+}
 .modalmain {
   display: flex;
   flex-direction: column;
@@ -213,6 +226,11 @@ $signup-color: lightgrey;
   font-size: 4rem;
   margin-top: 10rem;
 }
+.errorSearch {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 .notification-slider {
   position: fixed;
   top: 1rem;
@@ -233,33 +251,68 @@ $signup-color: lightgrey;
 .product-sort {
   width: 10rem;
   font-size: 1.2rem;
+  text-align: center;
   margin: 3rem auto auto;
   border-bottom: 2px solid black;
 }
 
-// SIGN UP FORM SYLING  //
-
-.signup {
-  background-color: $signup-color;
-  height: 80vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-.signfooter {
-  background-color: black;
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 11.4vh;
-}
-.signcopy {
-  color: $color_4;
-}
-
 // SHOPPING CART STYLES //
+
+.newsletter {
+  height: 12vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  width: 100%;
+  background-color: #fff;
+}
+.newsletter h1 {
+  font-size: 1.6rem;
+  color: #000;
+}
+.newsletter input {
+  width: 23rem;
+  height: 3rem;
+  border-radius: 30px;
+  padding: 0.5rem;
+  border: 2px solid #000;
+  transition: border-color 0.3s ease;
+}
+
+.newsletter input:hover {
+  border-color: #999;
+}
+
+.newsletter input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.newsletter input::placeholder {
+  color: #999;
+}
+
+.newsletter input:active {
+  border-color: #007bff;
+}
+.newsletter button.newslettersubscribe {
+  width: 10rem;
+  height: 3rem;
+  border: 1px solid #fff;
+  border-radius: 30px;
+  background-color: black;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.cartimg {
+  width: 40px;
+  height: 40px;
+}
 .cartitems {
   width: 100%;
   height: 100%;
@@ -290,6 +343,7 @@ $signup-color: lightgrey;
   font-size: 1.3rem;
   cursor: pointer;
 }
+
 .summary {
   font-size: 2rem;
   font-weight: 700;
@@ -371,61 +425,6 @@ $signup-color: lightgrey;
 .purchase:hover {
   background-color: #45a049;
 }
-.newsletter {
-  height: 12vh;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 3rem;
-  width: 100%;
-  background-color: #fff;
-}
-.newsletter h1 {
-  font-size: 1.6rem;
-  color: #000;
-}
-.newsletter input {
-  width: 23rem;
-  height: 3rem;
-  border-radius: 30px;
-  padding: 0.5rem;
-  border: 2px solid #000;
-  transition: border-color 0.3s ease;
-}
-
-.newsletter input:hover {
-  border-color: #999;
-}
-
-.newsletter input:focus {
-  outline: none;
-  border-color: #007bff;
-  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
-}
-
-.newsletter input::placeholder {
-  color: #999;
-}
-
-.newsletter input:active {
-  border-color: #007bff;
-}
-.newsletter button.newslettersubscribe {
-  width: 10rem;
-  height: 3rem;
-  border: 1px solid #fff;
-  border-radius: 30px;
-  background-color: black;
-  color: white;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-.cartimg {
-  width: 40px;
-  height: 40px;
-}
 
 .cart {
   position: relative;
@@ -434,136 +433,36 @@ $signup-color: lightgrey;
 .cart-link {
   position: relative;
 }
-.cart-size {
-  position: absolute;
-  bottom: -5px;
-  right: -5px;
-  background-color: red;
-  color: white;
-  font-size: 12px;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 .newsletter button.newslettersubscribe:hover {
   background-color: #999;
 }
 
-// SUPPORT PAGE STYLING
-.supp {
-  height: 100vh;
-  background-color: $signup-color;
-}
-.supportinfobox {
-  display: flex;
-  gap: 2rem;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 80vh;
-  width: 100vw;
-}
-.supportheader {
-  font-size: 3rem;
-  position: relative;
-  text-decoration: none;
-}
-
-.supportheader::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -5px;
-  width: 100%;
-  height: 5px;
-  background-color: black;
-  border-radius: 0 0 50% 50%;
-  box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.2);
-}
-.supportinfobox {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-.supportform {
-  width: 100%;
-  margin-top: 2rem;
-}
-
-.form-group {
-  margin-bottom: 20px;
-}
-
-.form-control {
-  width: 100%;
-  padding: 10px;
-  font-size: 16px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-}
-
-textarea.form-control {
-  resize: vertical;
-}
-
-.btn {
-  padding: 10px 20px;
-  font-size: 16px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.btn-primary {
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-}
-
-.form-check-label {
-  font-size: 14px;
-}
-.supportsend {
-  display: flex;
-  flex-direction: row;
-  gap: 2rem;
-  align-items: center;
-  justify-content: center;
-}
-.success-popup {
-  position: fixed;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: #4caf50;
-  color: white;
-  padding: 15px;
-  border-radius: 10px;
-  z-index: 9999;
-  animation: slide-up 0.5s ease-out;
-}
-.tos {
-  cursor: pointer;
-}
 @media (max-width: 580px) {
   .navbar {
     width: auto;
   }
+  .navbar-list {
+    gap: 1.2rem;
+  }
   .supportheader {
     margin-top: 2rem;
+  }
+  .purchase {
+    width: 12rem;
+    height: 5rem;
+  }
+  .checkout {
+    gap: 1.2rem;
   }
   .supportsend {
     gap: 1.5rem;
   }
   .header-text {
     font-size: 1.4rem;
-    margin-left: 4rem;
+    margin-left: 5rem;
   }
   .search {
-    width: 15rem;
+    width: 18rem;
   }
   #search-btn {
     display: none;
@@ -703,71 +602,4 @@ textarea.form-control {
 }
 .carousel_device_info {
   font-size: 1.5rem;
-}
-
-// CHECKOUT PAGE STYLING
-.checkout_container {
-  max-width: 600px;
-  margin: 3rem auto;
-  padding: 20px;
-}
-
-.checkout_form {
-  background-color: #f8f9fa;
-  border-radius: 10px;
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  padding: 20px;
-}
-
-.checkout_form h2 {
-  margin-bottom: 20px;
-  color: #333;
-}
-
-.payment_options {
-  margin-bottom: 20px;
-  display: flex;
-  flex-direction: row;
-  gap: 2rem;
-}
-
-.payment_options label {
-  margin-right: 20px;
-  font-size: 16px;
-}
-.checkout_summary {
-  display: flex;
-  gap: 1.2rem;
-  flex-direction: column;
-}
-.personal_information input,
-.address_information input {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border: none;
-  border-radius: 5px;
-  background-color: #fff;
-}
-
-.delivery_date {
-  margin-top: 10px;
-  font-size: 14px;
-}
-
-.place_order_button {
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  background-color: #007bff;
-  color: #fff;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.place_order_button:hover {
-  background-color: #0056b3;
 }

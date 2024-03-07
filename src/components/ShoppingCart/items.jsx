@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-export default function Items({totalPrice, setTotalPrice}) {
+export default function Items({ totalPrice, setTotalPrice }) {
   const [cartItems, setCartItems] = useState([]);
   useEffect(() => {
     const storedItems = JSON.parse(localStorage.getItem("cartItems")) || [];
@@ -39,7 +39,7 @@ export default function Items({totalPrice, setTotalPrice}) {
         <div className="emptycart">
           <h1>The cart is empty, please go back to the store.</h1>
           <button className="gh">
-            <a href="/" className="gohome">
+            <a href="/Electro-X" className="gohome">
               Take me back
             </a>
           </button>
@@ -70,7 +70,7 @@ export default function Items({totalPrice, setTotalPrice}) {
               <h3 className="delivery">Delivery: ${deliveryPrice}</h3>
             </div>
             <div className="checkoutbtn">
-              <a className="purchase" href="/checkout">
+              <a className="purchase" href="Electro-X/checkout">
                 Proceed to Checkout
               </a>
             </div>

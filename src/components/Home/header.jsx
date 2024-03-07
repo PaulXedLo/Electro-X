@@ -6,7 +6,11 @@ export default function Header({ setSearch, search }) {
         <h1 className="header-text">Get your new phone today!</h1>
         <Search setSearch={setSearch} search={search} />
       </div>
-      <img src="/header-bg.jpg" alt="photo of iphone" className="phonephoto" />
+      <img
+        src="./Electro-X/header-bg.png"
+        alt="photo of iphone"
+        className="phonephoto"
+      />
     </header>
   );
 }

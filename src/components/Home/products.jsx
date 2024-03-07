@@ -2,7 +2,6 @@ import { useContext, useEffect, useReducer, useMemo, useState } from "react";
 import StarRating from "./starrating";
 import Modal from "react-modal";
 import ProductSort from "./sort";
-import { Cartcontext } from "../../context/Context";
 const devices = require("./devices");
 
 const initialState = {
@@ -89,8 +88,6 @@ export default function Products({ search }) {
 
 export function Product({ dev }) {
   const [showNotification, setShowNotification] = useState(false);
-  const Globalstate = useContext(Cartcontext);
-  const { dispatch } = useContext(Cartcontext);
   const [modalIsOpen, setIsOpen] = useReducer((state, action) => {
     switch (action.type) {
       case "OPEN_MODAL":
@@ -127,9 +124,6 @@ export function Product({ dev }) {
       }, 3000);
       return;
     }
-
-    dispatch({ type: "ADD", payload: dev });
-
     const updatedCartItems = [...cartItems, dev];
     localStorage.setItem("cartItems", JSON.stringify(updatedCartItems));
     setShowNotification({ message: "Added to cart", color: "green" });
@@ -143,12 +137,14 @@ export function Product({ dev }) {
       setIsOpen({ type: "OPEN_MODAL" });
       window.scrollTo(0, 0);
       document.body.style.overflow = "hidden";
+      document.body.classList.add("modal-open");
     }
   }
 
   function closeModal() {
     setIsOpen({ type: "CLOSE_MODAL" });
     document.body.style.overflow = "auto";
+    document.body.classList.remove("modal-open");
   }
 
   const stopPropagation = (e) => {
@@ -210,6 +206,7 @@ export function Product({ dev }) {
         contentLabel="Product Modal"
         overlayClassName="modal-overlay"
       >
+        <div className="dark-overlay" onClick={closeModal}></div>
         <button onClick={closeModal} className="closemodal">
           Close
         </button>

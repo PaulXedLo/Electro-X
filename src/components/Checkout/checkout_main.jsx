@@ -31,7 +31,7 @@ export default function CheckoutMain({}) {
   return (
     <div className="checkout_container">
       <div className="checkout_form">
-        <h2>Checkout</h2>
+        <h2 className="checkout_header">Checkout</h2>
         <div className="payment_options">
           <label>
             <input
@@ -103,7 +103,9 @@ export default function CheckoutMain({}) {
           <p className="delivery_date">
             Estimated Delivery Date: {estimatedDeliveryDate}
           </p>
-          <button className="place_order_button">Place Order</button>
+          <a className="place_order_button" href="/">
+            Place Order
+          </a>
         </div>
       </div>
     </div>

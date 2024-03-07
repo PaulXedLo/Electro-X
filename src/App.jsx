@@ -8,16 +8,11 @@ import Profile from "./pages/Profile";
 import Checkout from "./pages/Checkout";
 function App() {
   const [isSignedIn, setIsSignedIn] = useState(false);
-  const [cartSize, setCartSize] = useState(0);
   const [discount, setDiscount] = useState(false);
   const [totalPrice, setTotalPrice] = useState(0);
-  useEffect(() => {
-    const storedItems = JSON.parse(localStorage.getItem("cartItems")) || [];
-    setCartSize(storedItems.length);
-  }, []);
+
   useEffect(() => {
     const token = localStorage.getItem("token");
-
     if (token) {
       setIsSignedIn(true);
       setDiscount(true);
@@ -32,7 +27,7 @@ function App() {
     window.location.reload();
   };
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Routes>
         <Route
           path="/"
@@ -40,29 +35,26 @@ function App() {
             <Home
               discount={discount}
               isSignedIn={isSignedIn}
-              cartSize={cartSize}
               setIsSignedIn={setIsSignedIn}
               handleLogout={handleLogout}
             />
           }
         />
         <Route
-          path="signin"
+          path="/signin"
           element={
             <Signin
               isSignedIn={isSignedIn}
-              cartSize={cartSize}
               setIsSignedIn={setIsSignedIn}
               handleLogout={handleLogout}
             />
           }
         />
         <Route
-          path="cart"
+          path="/cart"
           element={
             <ShoppingCart
               isSignedIn={isSignedIn}
-              cartSize={cartSize}
               totalPrice={totalPrice}
               setTotalPrice={setTotalPrice}
               setIsSignedIn={setIsSignedIn}
@@ -71,33 +63,30 @@ function App() {
           }
         />
         <Route
-          path="support"
+          path="/support"
           element={
             <Support
               isSignedIn={isSignedIn}
-              cartSize={cartSize}
               setIsSignedIn={setIsSignedIn}
               handleLogout={handleLogout}
             />
           }
         />
         <Route
-          path="profile"
+          path="/profile"
           element={
             <Profile
               isSignedIn={isSignedIn}
-              cartSize={cartSize}
               setIsSignedIn={setIsSignedIn}
               handleLogout={handleLogout}
             />
           }
         />
         <Route
-          path="checkout"
+          path="/checkout"
           element={
             <Checkout
               isSignedIn={isSignedIn}
-              cartSize={cartSize}
               setIsSignedIn={setIsSignedIn}
               handleLogout={handleLogout}
               totalPrice={totalPrice}

@@ -1,6 +1,6 @@
 import SupportInfo from "../components/Support/SupportInfo";
 import Navigation from "../components/navigation";
-
+import "../components/Support/support.scss";
 export default function Support({
   isSignedIn,
   setIsSignedIn,
