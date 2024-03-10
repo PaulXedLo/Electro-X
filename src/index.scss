@@ -164,8 +164,8 @@ body.modal-open {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
-  z-index: 999; /* Ensure overlay is on top of everything */
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
 }
 .modalmain {
   display: flex;

@@ -15,8 +15,8 @@
 }
 
 .profile_image {
-  width: 100px; /* Adjust size as needed */
-  height: 100px; /* Adjust size as needed */
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
 }
 
@@ -122,7 +122,6 @@
   background-color: #0056b3;
 }
 
-/* Media query for smaller screens (e.g., phones) */
 @media only screen and (max-width: 768px) {
   .account_dashboard {
     align-items: stretch;
