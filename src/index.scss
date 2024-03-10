@@ -53,7 +53,6 @@ $signup-color: lightgrey;
   align-items: center;
   height: 5rem;
   gap: 2rem;
-  position: sticky;
   width: 100%;
 }
 
@@ -80,6 +79,9 @@ $signup-color: lightgrey;
   display: flex;
   gap: 1.2rem;
   flex-direction: row;
+}
+.header_bottom {
+  display: none;
 }
 .header-info {
   display: flex;
@@ -128,7 +130,7 @@ $signup-color: lightgrey;
   right: 0;
   z-index: 0;
   height: 30rem;
-  width: 50rem;
+  width: 40rem;
   animation-name: showUp;
   animation-duration: 3s;
 }
@@ -198,6 +200,7 @@ body.modal-open {
   margin-left: 2rem;
   height: 10rem;
   width: 19rem;
+  padding: 1rem;
   flex-direction: column;
   transition: box-shadow 0.3s ease;
 }
@@ -242,9 +245,6 @@ body.modal-open {
   padding: 10px;
   transition: right 0.3s ease-in-out;
 }
-.errorp {
-  margin-left: 9rem;
-}
 .modalimg {
   width: 40rem;
 }
@@ -256,8 +256,13 @@ body.modal-open {
   border-bottom: 2px solid black;
 }
 
+.errorp {
+  text-align: center;
+}
 // SHOPPING CART STYLES //
-
+h3.delivery {
+  text-align: center;
+}
 .newsletter {
   height: 12vh;
   display: flex;
@@ -429,7 +434,10 @@ body.modal-open {
 .cart {
   position: relative;
 }
-
+.starr {
+  width: 12.3rem;
+  margin-top: 1rem;
+}
 .cart-link {
   position: relative;
 }
@@ -441,6 +449,22 @@ body.modal-open {
   .navbar {
     width: auto;
   }
+  .header_bottom {
+    display: block;
+    width: 80%;
+    height: 13.8rem;
+    position: absolute;
+    bottom: 0;
+  }
+  .product-sort {
+    border-bottom: 0;
+  }
+  .newsletter input {
+    width: auto;
+  }
+  .emptycart {
+    padding: 3rem;
+  }
   .navbar-list {
     gap: 1.2rem;
   }
@@ -448,8 +472,8 @@ body.modal-open {
     margin-top: 2rem;
   }
   .purchase {
-    width: 12rem;
-    height: 5rem;
+    width: 14rem;
+    height: 3.5rem;
   }
   .checkout {
     gap: 1.2rem;
@@ -459,10 +483,18 @@ body.modal-open {
   }
   .header-text {
     font-size: 1.4rem;
-    margin-left: 5rem;
+  }
+  .header {
+    justify-content: center;
+    position: relative;
   }
   .search {
     width: 18rem;
+    margin-left: 0;
+  }
+
+  .product-list {
+    margin-top: 1rem;
   }
   #search-btn {
     display: none;
@@ -472,11 +504,12 @@ body.modal-open {
   .product-item {
     width: 15rem;
     height: 23rem;
+    padding: 0;
     margin-left: 0;
   }
   .product-list {
     height: auto;
-    gap: 2rem;
+    gap: 3rem;
     width: auto;
   }
   .starrating {
@@ -505,13 +538,22 @@ body.modal-open {
   #overlay {
     width: 40rem;
     max-width: 80rem;
+    background-color: #fff;
+    border: none;
+  }
+  #overlay h5 {
+    color: #000;
+    font-size: 2rem;
+  }
+  #overlay span {
+    color: #000;
   }
   .modalinfo {
     flex-direction: column;
     height: auto;
     align-items: center;
     justify-content: center;
-    gap: 1rem;
+    gap: 2rem;
   }
   .modalimg {
     width: auto;
@@ -544,6 +586,7 @@ body.modal-open {
     margin-top: 2rem;
   }
 }
+
 @media (max-width: 800px) {
   #overlay {
     width: 100%;

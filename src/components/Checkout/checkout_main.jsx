@@ -103,7 +103,7 @@ export default function CheckoutMain({}) {
           <p className="delivery_date">
             Estimated Delivery Date: {estimatedDeliveryDate}
           </p>
-          <a className="place_order_button" href="/">
+          <a className="place_order_button" href="/Electro-X">
             Place Order
           </a>
         </div>

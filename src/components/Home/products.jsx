@@ -54,9 +54,9 @@ export default function Products({ search }) {
 
   const filteredDevices = useMemo(() => {
     return state.sortedDevices.filter((item) =>
-      search.toLowerCase() === ""
+      search.trim() === ""
         ? true
-        : item.name.toLowerCase().includes(search)
+        : item.name.toLowerCase().includes(search.toLowerCase())
     );
   }, [search, state.sortedDevices]);
 

@@ -30,7 +30,7 @@ export default function Dashboard({ handleLogout }) {
           >
             Edit Information
           </li>
-          <a onClick={handleLogout} className="logout" href="/">
+          <a onClick={handleLogout} className="logout" href="/Electro-X">
             Log Out
           </a>
         </ul>
