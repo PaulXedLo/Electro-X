@@ -24,6 +24,12 @@ function App() {
   const handleLogout = () => {
     localStorage.removeItem("token");
     localStorage.removeItem("username");
+    localStorage.removeItem("email");
+    localStorage.removeItem("password");
+    localStorage.removeItem("address");
+    localStorage.removeItem("postalCode");
+    localStorage.removeItem("firstName");
+    localStorage.removeItem("lastName");
     window.location.reload();
   };
   return (
