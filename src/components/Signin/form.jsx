@@ -74,7 +74,11 @@ export default function Form({ isSignedIn, setIsSignedIn }) {
 
   return (
     <div className="signup">
-      <form className="max-w-sm mx-auto" onSubmit={handleSubmitForm}>
+      <form
+        className="max-w-sm mx-auto"
+        id="sign_up_form"
+        onSubmit={handleSubmitForm}
+      >
         <div className="mb-5">
           <label
             htmlFor="username"
