@@ -70,7 +70,7 @@ export default function Items({ totalPrice, setTotalPrice }) {
               <h3 className="delivery">Delivery: ${deliveryPrice}</h3>
             </div>
             <div className="checkoutbtn">
-              <a className="purchase" href="/Electro-X/checkout">
+              <a className="purchase" href="checkout">
                 Proceed to Checkout
               </a>
             </div>
