@@ -181,13 +181,23 @@ export function Product({ dev }) {
                 </Link>
               </h5>
             </a>
-            <StarRating
-              defaultRating={getDefaultRating()}
-              className="starrating"
-            />
+            <Link
+              onClick={() => window.scrollTo(0, 0)}
+              to={`/product/${dev.id}`}
+            >
+              <StarRating
+                defaultRating={getDefaultRating()}
+                className="starrating"
+              />
+            </Link>
             <div className="flex items-center justify-between">
               <span className="text-3xl font-bold text-gray-900 dark:text-black mt-5">
-                {dev.price}
+                <Link
+                  onClick={() => window.scrollTo(0, 0)}
+                  to={`/product/${dev.id}`}
+                >
+                  {dev.price}
+                </Link>
               </span>
               <a
                 href="#"

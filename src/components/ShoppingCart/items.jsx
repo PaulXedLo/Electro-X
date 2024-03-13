@@ -1,14 +1,36 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 export default function Items({ totalPrice, setTotalPrice }) {
   const [cartItems, setCartItems] = useState([]);
+  const [showConfirmation, setShowConfirmation] = useState(false);
+  const [itemToRemoveIndex, setItemToRemoveIndex] = useState(null);
+
+  const handleRemove = (index) => {
+    setItemToRemoveIndex(index);
+    setShowConfirmation(true);
+  };
+
+  const confirmRemoveItem = () => {
+    const newItems = [...cartItems];
+    newItems.splice(itemToRemoveIndex, 1);
+    localStorage.setItem("cartItems", JSON.stringify(newItems));
+    removeItem(itemToRemoveIndex);
+    setShowConfirmation(false);
+  };
+
+  const cancelRemoveItem = () => {
+    setShowConfirmation(false);
+  };
+
   useEffect(() => {
     const storedItems = JSON.parse(localStorage.getItem("cartItems")) || [];
     setCartItems(storedItems);
     updateTotalPrice(storedItems);
   }, [localStorage]);
+
   const deliveryPrice = 19.99;
+
   const updateTotalPrice = (items) => {
     const total = items.reduce((acc, item) => {
       const price = parseFloat(item.price);
@@ -58,7 +80,7 @@ export default function Items({ totalPrice, setTotalPrice }) {
               index={index}
               cartItems={cartItems}
               updateQuantity={updateQuantity}
-              removeItem={removeItem}
+              removeItem={handleRemove}
               deliveryPrice={deliveryPrice}
             />
           ))}
@@ -78,6 +100,17 @@ export default function Items({ totalPrice, setTotalPrice }) {
           </div>
         </ul>
       )}
+      {showConfirmation && (
+        <div className="confirmation-modal">
+          <div className="confirmation-content">
+            <p>Are you sure you want to delete the item?</p>
+            <div className="confirmation-buttons">
+              <button onClick={confirmRemoveItem}>Yes</button>
+              <button onClick={cancelRemoveItem}>No</button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
@@ -95,13 +128,6 @@ export function Item({ el, index, updateQuantity, removeItem, cartItems }) {
       setQuantity((prevQuantity) => prevQuantity - 1);
       updateQuantity(index, quantity - 1);
     }
-  };
-
-  const handleRemove = () => {
-    const newItems = [...cartItems];
-    newItems.splice(index, 1);
-    localStorage.setItem("cartItems", JSON.stringify(newItems));
-    removeItem(index);
   };
 
   const price = parseFloat(el.price);
@@ -126,8 +152,9 @@ export function Item({ el, index, updateQuantity, removeItem, cartItems }) {
           -
         </button>
       </div>
-      <button className="removeitem" onClick={handleRemove}>
-        X
+      <button className="removeitem" onClick={() => removeItem(index)}>
+        {" "}
+        ❌
       </button>
     </li>
   );

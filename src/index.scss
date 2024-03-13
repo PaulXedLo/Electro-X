@@ -417,7 +417,41 @@ h3.delivery {
   justify-content: flex-end;
   margin-top: 20px;
 }
+.confirmation-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.confirmation-content p {
+  font-size: 1.4rem;
+}
+.confirmation-content {
+  gap: 2rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.confirmation-buttons button:hover {
+  color: red;
+}
+.confirmation-buttons {
+  display: flex;
+  justify-content: space-around;
+}
 
+.confirmation-content {
+  animation: slide-up 0.3s ease;
+}
 .purchase {
   background-color: #4caf50;
   border: none;
@@ -611,7 +645,14 @@ h3.delivery {
   .totalpricebox {
   }
 }
-
+@keyframes slide-up {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
 // CAROUSEL IMAGE STYLING
 
 .image-container {
