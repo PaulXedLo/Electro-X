@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Items({ totalPrice, setTotalPrice }) {
   const [cartItems, setCartItems] = useState([]);
@@ -70,9 +71,9 @@ export default function Items({ totalPrice, setTotalPrice }) {
               <h3 className="delivery">Delivery: ${deliveryPrice}</h3>
             </div>
             <div className="checkoutbtn">
-              <a className="purchase" href="checkout">
+              <Link to="/checkout" className="purchase">
                 Proceed to Checkout
-              </a>
+              </Link>
             </div>
           </div>
         </ul>
@@ -113,7 +114,7 @@ export function Item({ el, index, updateQuantity, removeItem, cartItems }) {
 
   return (
     <li className="product">
-      <img src={el.img} alt="Product Image" className="productimage" />
+      <img src={el.img[0]} alt="Product Image" className="productimage" />
       <h2>{el.name}</h2>
       <h1 className="productprice">${totalPrice}</h1>{" "}
       <div className="quantity">

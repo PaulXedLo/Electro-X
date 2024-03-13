@@ -6,8 +6,8 @@ import Newsletter from "../components/Home/newsletter";
 import { useState, useEffect } from "react";
 import CarouselSection from "../components/Home/carouselsection";
 import ContactInfo from "../components/Home/contactinfo";
-import SignFooter from "../components/Signin/footer";
-
+import "../components/Home/productdetails.scss";
+import "../components/Home/productpresentation.scss";
 export default function Home({ isSignedIn, handleLogout }) {
   const [search, setSearch] = useState("");
   const images = [

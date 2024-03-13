@@ -2,6 +2,7 @@ import { useContext, useEffect, useReducer, useMemo, useState } from "react";
 import StarRating from "./starrating";
 import Modal from "react-modal";
 import ProductSort from "./sort";
+import { Link } from "react-router-dom";
 const devices = require("./devices");
 
 const initialState = {
@@ -140,7 +141,10 @@ export function Product({ dev }) {
       document.body.classList.add("modal-open");
     }
   }
-
+  function handleCloseModal() {
+    window.scrollTo(0, 0);
+    closeModal();
+  }
   function closeModal() {
     setIsOpen({ type: "CLOSE_MODAL" });
     document.body.style.overflow = "auto";
@@ -169,7 +173,12 @@ export function Product({ dev }) {
           <div className="px-5 pb-5">
             <a href="#" onClick={openModal}>
               <h5 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-black">
-                {dev.name}
+                <Link
+                  onClick={() => window.scrollTo(0, 0)}
+                  to={`/product/${dev.id}`}
+                >
+                  {dev.name}
+                </Link>
               </h5>
             </a>
             <StarRating
@@ -296,6 +305,14 @@ export function Product({ dev }) {
               >
                 Add To Cart
               </button>
+              <Link
+                onClick={handleCloseModal}
+                to={`/product/${dev.id}`}
+                id="read_more"
+                class="text-white bg-grey-600 hover:bg-darkgray-700 focus:ring-4 focus:outline-none focus:ring-blue-200 dark:focus:ring-blue-900 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex justify-center w-full text-center"
+              >
+                Read More
+              </Link>
             </div>
           </div>
         </div>

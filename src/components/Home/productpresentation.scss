@@ -1,0 +1,26 @@
+.product__presentation {
+  margin-top: 5rem;
+  display: flex;
+  gap: 3rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  background-color: black;
+}
+.presentation__title {
+  color: #fff;
+  margin-top: 5rem;
+  font-size: 2.2rem;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.product_iframe {
+  width: 50rem;
+  padding-bottom: 3rem;
+}
+.presentation__title.animate {
+  opacity: 1;
+  transform: translateY(0);
+}

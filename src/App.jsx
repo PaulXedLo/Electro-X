@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Support from "./pages/Support";
 import Profile from "./pages/Profile";
 import Checkout from "./pages/Checkout";
+import ProductDetails from "./components/Home/ProductDetails";
 function App() {
   const [isSignedIn, setIsSignedIn] = useState(false);
   const [discount, setDiscount] = useState(false);
@@ -99,6 +100,7 @@ function App() {
             />
           }
         />
+        <Route path="/product/:id" element={<ProductDetails />} />
       </Routes>
     </BrowserRouter>
   );
