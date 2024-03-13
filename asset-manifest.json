@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Electro-X/static/css/main.78c7a8d3.css",
-    "main.js": "/Electro-X/static/js/main.dff5c200.js",
+    "main.css": "/Electro-X/static/css/main.20d50e36.css",
+    "main.js": "/Electro-X/static/js/main.014b8c1f.js",
     "static/media/header_bg.jpg": "/Electro-X/static/media/header_bg.2fbaf3fe080504314ce0.jpg",
     "static/media/header_bottom.jpg": "/Electro-X/static/media/header_bottom.2fbaf3fe080504314ce0.jpg",
     "static/media/e.jpg": "/Electro-X/static/media/e.db6570c57494398772dd.jpg",
@@ -13,11 +13,11 @@
     "static/media/youtube_icon.svg": "/Electro-X/static/media/youtube_icon.cf9cd84b2cb77d3e26ffa9d7a6c6297c.svg",
     "index.html": "/Electro-X/index.html",
     "static/media/facebook_icon.svg": "/Electro-X/static/media/facebook_icon.ce04998df0918bf0a3d804ae647a41f6.svg",
-    "main.78c7a8d3.css.map": "/Electro-X/static/css/main.78c7a8d3.css.map",
-    "main.dff5c200.js.map": "/Electro-X/static/js/main.dff5c200.js.map"
+    "main.20d50e36.css.map": "/Electro-X/static/css/main.20d50e36.css.map",
+    "main.014b8c1f.js.map": "/Electro-X/static/js/main.014b8c1f.js.map"
   },
   "entrypoints": [
-    "static/css/main.78c7a8d3.css",
-    "static/js/main.dff5c200.js"
+    "static/css/main.20d50e36.css",
+    "static/js/main.014b8c1f.js"
   ]
 }
