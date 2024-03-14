@@ -15,6 +15,12 @@ const devices = [
     embed: "https://www.youtube.com/embed/zhoTX0RRXPQ",
     price: "899$",
     id: 1,
+    features: [
+      "Water-resistant design",
+      "Supports 5G network connectivity",
+      "Wireless charging capability",
+      "Includes S Pen stylus",
+    ],
   },
   {
     img: [
@@ -32,6 +38,11 @@ const devices = [
     embed: "https://www.youtube.com/embed/nVwOd_6yyf8",
     price: "699$",
     id: 2,
+    features: [
+      "Supports 5G network connectivity",
+      "Ultra-slim design",
+      "Fast charging capability",
+    ],
   },
   {
     img: [
@@ -49,6 +60,11 @@ const devices = [
     embed: "https://www.youtube.com/embed/Wuk8AhWcQNY",
     price: "599$",
     id: 3,
+    features: [
+      "Supports 5G network connectivity",
+      "Ultra-wide camera lens",
+      "Curved-edge display",
+    ],
   },
   {
     img: [
@@ -66,6 +82,11 @@ const devices = [
     embed: "https://www.youtube.com/embed/-wOdL7HFNOs",
     price: "499$",
     id: 4,
+    features: [
+      "Ultra-wide camera lens",
+      "IP68 water and dust resistance",
+      "Supports 8K video recording",
+    ],
   },
   {
     img: [
@@ -83,6 +104,11 @@ const devices = [
     embed: "https://www.youtube.com/embed/XaqOejIaFgM",
     price: "1099$",
     id: 5,
+    features: [
+      "Supports 5G network connectivity",
+      "Foldable design",
+      "S Pen stylus support",
+    ],
   },
   {
     img: [
@@ -100,6 +126,11 @@ const devices = [
     embed: "https://www.youtube.com/embed/t_8M_2clsVw",
     price: "599$",
     id: 6,
+    features: [
+      "Supports 5G network connectivity",
+      "S Pen stylus included",
+      "Enhanced productivity features",
+    ],
   },
   {
     img: [
@@ -117,6 +148,11 @@ const devices = [
     embed: "https://www.youtube.com/embed/cVpcl7KGly0",
     price: "1099$",
     id: 7,
+    features: [
+      "Ceramic shield front cover",
+      "A15 Bionic chip",
+      "Supports 5G network connectivity",
+    ],
   },
   {
     img: [
@@ -134,6 +170,11 @@ const devices = [
     embed: "https://www.youtube.com/embed/H4SXsmXZlwk",
     price: "899$",
     id: 8,
+    features: [
+      "Super Retina XDR display",
+      "A14 Bionic chip",
+      "Face ID facial recognition",
+    ],
   },
   {
     img: [
@@ -151,6 +192,11 @@ const devices = [
     embed: "https://www.youtube.com/embed/bz0pUVHI5E0",
     price: "699$",
     id: 9,
+    features: [
+      "Super Retina XDR display",
+      "A15 Bionic chip",
+      "Supports 5G network connectivity",
+    ],
   },
   {
     img: [
@@ -168,6 +214,12 @@ const devices = [
     embed: "https://www.youtube.com/embed/TfRtC5cQCpA",
     price: "699$",
     id: 10,
+    features: [
+      "Super Retina XDR display",
+      "A14 Bionic chip",
+      "Ceramic Shield front cover",
+      "Pro camera system with 12MP Ultra Wide, Wide, and Telephoto cameras",
+    ],
   },
 ];
 

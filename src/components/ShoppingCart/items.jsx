@@ -145,11 +145,11 @@ export function Item({ el, index, updateQuantity, removeItem, cartItems }) {
       <h1 className="productprice">${totalPrice}</h1>{" "}
       <div className="quantity">
         <button className="inc" onClick={handleIncrement}>
-          +
+          ➕
         </button>
-        <p>{quantity}</p>
+        <p className="product__quantity">{quantity}</p>
         <button className="dec" onClick={handleDecrement}>
-          -
+          ➖
         </button>
       </div>
       <button className="removeitem" onClick={() => removeItem(index)}>

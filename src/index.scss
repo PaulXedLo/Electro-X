@@ -46,6 +46,7 @@ $signup-color: lightgrey;
   font-family: $font-family_1;
 }
 .navbar {
+  z-index: 9999;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -343,6 +344,7 @@ h3.delivery {
 }
 .productprice {
   font-size: 1.3rem;
+  font-weight: bold;
 }
 .removeitem {
   color: red;
@@ -364,7 +366,10 @@ h3.delivery {
 .inc,
 .dec {
   width: 2rem;
-  border: 1px solid grey;
+}
+.product__quantity {
+  font-weight: bold;
+  font-size: 1.1rem;
 }
 .emptycart {
   margin-top: 13rem;
@@ -479,6 +484,9 @@ h3.delivery {
 }
 .cart-link {
   position: relative;
+}
+.form-group label {
+  font-weight: 700;
 }
 .newsletter button.newslettersubscribe:hover {
   background-color: #999;
@@ -629,6 +637,10 @@ h3.delivery {
 @media (max-width: 800px) {
   #overlay {
     width: 100%;
+  }
+  .confirmation-content p {
+    font-size: 1.2rem;
+    text-align: center;
   }
   .product h2 {
     min-width: 168px;

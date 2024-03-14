@@ -8,6 +8,7 @@ import CarouselSection from "../components/Home/carouselsection";
 import ContactInfo from "../components/Home/contactinfo";
 import "../components/Home/productdetails.scss";
 import "../components/Home/productpresentation.scss";
+import "../components/Home/productspecs.scss";
 export default function Home({ isSignedIn, handleLogout }) {
   const [search, setSearch] = useState("");
   const images = [

@@ -9,6 +9,7 @@ import { useState, useEffect } from "react";
 import { FaAngleDown } from "react-icons/fa";
 import { useRef } from "react";
 import ProductPresentation from "./ProductPresentation";
+import ProductSpecs from "./ProductSpecs";
 
 export default function ProductDetails() {
   const [showNotification, setShowNotification] = useState(false);
@@ -114,7 +115,11 @@ export default function ProductDetails() {
               />
             </div>
           </div>
-          <Slider {...settings} style={{ width: "50vw", height: "50vh" }}>
+          <Slider
+            {...settings}
+            className="slider__comp"
+            style={{ width: "50vw", height: "50vh" }}
+          >
             {product.img.map((image, index) => (
               <div key={index} className="slider__div">
                 <img
@@ -144,6 +149,7 @@ export default function ProductDetails() {
         </div>
       </div>
       <ProductPresentation product={product} />
+      <ProductSpecs product={product} />
     </>
   );
 }

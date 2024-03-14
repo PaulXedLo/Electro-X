@@ -90,3 +90,44 @@
     transform: translateY(0);
   }
 }
+@media (max-width: 1480px) {
+  .product__image {
+    width: 20rem;
+    margin-top: 4rem;
+    margin-left: 12rem;
+  }
+  .product__component li {
+    font-size: 1.3rem;
+  }
+  .product__maininfo h1 {
+    font-size: 1.5rem;
+  }
+  .product__maininfo {
+    left: 4rem;
+    z-index: 9999;
+  }
+}
+
+@media (max-width: 1185px) {
+  .product__component {
+    flex-direction: column;
+  }
+  .product__image {
+    margin: auto;
+  }
+  .product__maininfo {
+    display: none;
+  }
+  .slick-slider {
+    margin-left: 0;
+  }
+  .product__info {
+    margin-top: -0.5rem;
+  }
+  .product__name {
+    font-size: 1.6rem;
+  }
+  .product__nameandrating {
+    text-align: center;
+  }
+}
