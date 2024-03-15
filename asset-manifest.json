@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Electro-X/static/css/main.1f80e454.css",
+    "main.css": "/Electro-X/static/css/main.740cec33.css",
     "main.js": "/Electro-X/static/js/main.2638d939.js",
     "static/media/star.svg": "/Electro-X/static/media/star.af2375658a9764cd37e216c71d71ad2a.svg",
     "static/media/crystal.svg": "/Electro-X/static/media/crystal.ca6e6f1c197e41bda7950017aebf5281.svg",
@@ -15,11 +15,11 @@
     "static/media/youtube_icon.svg": "/Electro-X/static/media/youtube_icon.cf9cd84b2cb77d3e26ffa9d7a6c6297c.svg",
     "index.html": "/Electro-X/index.html",
     "static/media/facebook_icon.svg": "/Electro-X/static/media/facebook_icon.ce04998df0918bf0a3d804ae647a41f6.svg",
-    "main.1f80e454.css.map": "/Electro-X/static/css/main.1f80e454.css.map",
+    "main.740cec33.css.map": "/Electro-X/static/css/main.740cec33.css.map",
     "main.2638d939.js.map": "/Electro-X/static/js/main.2638d939.js.map"
   },
   "entrypoints": [
-    "static/css/main.1f80e454.css",
+    "static/css/main.740cec33.css",
     "static/js/main.2638d939.js"
   ]
 }
