@@ -68,3 +68,32 @@
 .animation-right {
   animation: fadeInRight 1s ease forwards;
 }
+@media (max-width: 830px) {
+  .specs_list {
+    width: auto;
+    text-align: center;
+  }
+  .crystal__icon {
+    left: 2%;
+  }
+}
+@media (max-width: 1318px) {
+  .crystal__icon {
+    left: 40%;
+  }
+}
+@media (max-width: 1563px) {
+  .crystal__icon {
+    left: 44%;
+  }
+}
+@media (max-width: 1045px) {
+  .crystal__icon {
+    left: 40%;
+  }
+}
+@media (max-width: 548px) {
+  .crystal__icon {
+    left: 31%;
+  }
+}
