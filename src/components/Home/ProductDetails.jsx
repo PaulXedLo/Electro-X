@@ -19,7 +19,7 @@ export default function ProductDetails() {
   const scrollArrowRef = useRef(null);
   const handleAddToCart = (e) => {
     e.preventDefault();
-    const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+    const cartItems = JSON.parse(sessionStorage.getItem("cartItems")) || [];
     const isItemInCart = cartItems.some((item) => item.name === product.name);
     if (isItemInCart) {
       setShowNotification({
@@ -32,7 +32,7 @@ export default function ProductDetails() {
       return;
     }
     const updatedCartItems = [...cartItems, product];
-    localStorage.setItem("cartItems", JSON.stringify(updatedCartItems));
+    sessionStorage.setItem("cartItems", JSON.stringify(updatedCartItems));
     setShowNotification({ message: "Added to cart", color: "green" });
     setTimeout(() => {
       setShowNotification(false);

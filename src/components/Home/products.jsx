@@ -112,7 +112,7 @@ export function Product({ dev }) {
   };
   const handleAddToCart = (e) => {
     e.preventDefault();
-    const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+    const cartItems = JSON.parse(sessionStorage.getItem("cartItems")) || [];
     const isItemInCart = cartItems.some((item) => item.name === dev.name);
     closeModal();
     if (isItemInCart) {
@@ -126,7 +126,7 @@ export function Product({ dev }) {
       return;
     }
     const updatedCartItems = [...cartItems, dev];
-    localStorage.setItem("cartItems", JSON.stringify(updatedCartItems));
+    sessionStorage.setItem("cartItems", JSON.stringify(updatedCartItems));
     setShowNotification({ message: "Added to cart", color: "green" });
     setTimeout(() => {
       setShowNotification(false);

@@ -8,7 +8,7 @@ export default function ChangePassword() {
   const [error, setError] = useState("");
 
   const handleChangePassword = () => {
-    const storedPassword = localStorage.getItem("password");
+    const storedPassword = sessionStorage.getItem("password");
     if (currentPassword !== storedPassword) {
       setError("Current password is incorrect");
       return;
@@ -17,7 +17,7 @@ export default function ChangePassword() {
       setError("New passwords do not match");
       return;
     }
-    localStorage.setItem("password", newPassword);
+    sessionStorage.setItem("password", newPassword);
     setPasswordChanged(true);
     setCurrentPassword("");
     setNewPassword("");

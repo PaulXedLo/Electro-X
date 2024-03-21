@@ -14,7 +14,7 @@ export default function Items({ totalPrice, setTotalPrice }) {
   const confirmRemoveItem = () => {
     const newItems = [...cartItems];
     newItems.splice(itemToRemoveIndex, 1);
-    localStorage.setItem("cartItems", JSON.stringify(newItems));
+    sessionStorage.setItem("cartItems", JSON.stringify(newItems));
     removeItem(itemToRemoveIndex);
     setShowConfirmation(false);
   };
@@ -24,10 +24,10 @@ export default function Items({ totalPrice, setTotalPrice }) {
   };
 
   useEffect(() => {
-    const storedItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+    const storedItems = JSON.parse(sessionStorage.getItem("cartItems")) || [];
     setCartItems(storedItems);
     updateTotalPrice(storedItems);
-  }, [localStorage]);
+  }, [sessionStorage]);
 
   const deliveryPrice = 19.99;
 

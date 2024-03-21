@@ -49,10 +49,10 @@ export default function Form({ isSignedIn, setIsSignedIn }) {
   };
   const handleSuccessfulSignup = () => {
     const token = "dummyToken";
-    localStorage.setItem("token", token);
-    localStorage.setItem("username", username);
-    localStorage.setItem("email", email);
-    localStorage.setItem("password", password);
+    sessionStorage.setItem("token", token);
+    sessionStorage.setItem("username", username);
+    sessionStorage.setItem("email", email);
+    sessionStorage.setItem("password", password);
     navigate("/");
     setIsSignedIn(true);
   };

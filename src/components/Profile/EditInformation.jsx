@@ -10,12 +10,12 @@ export default function EditInformation() {
   const [successMessage, setSuccessMessage] = useState("");
 
   useEffect(() => {
-    const storedEmail = localStorage.getItem("email") || "";
-    const storedUsername = localStorage.getItem("username") || "";
-    const storedFirstName = localStorage.getItem("firstName") || "";
-    const storedLastName = localStorage.getItem("lastName") || "";
-    const storedAddress = localStorage.getItem("address") || "";
-    const storedPostalCode = localStorage.getItem("postalCode") || "";
+    const storedEmail = sessionStorage.getItem("email") || "";
+    const storedUsername = sessionStorage.getItem("username") || "";
+    const storedFirstName = sessionStorage.getItem("firstName") || "";
+    const storedLastName = sessionStorage.getItem("lastName") || "";
+    const storedAddress = sessionStorage.getItem("address") || "";
+    const storedPostalCode = sessionStorage.getItem("postalCode") || "";
     setEmail(storedEmail);
     setUsername(storedUsername);
     setFirstName(storedFirstName);
@@ -25,12 +25,12 @@ export default function EditInformation() {
   }, []);
 
   const handleSetInformation = () => {
-    localStorage.setItem("email", email);
-    localStorage.setItem("username", username);
-    localStorage.setItem("firstName", firstName);
-    localStorage.setItem("lastName", lastName);
-    localStorage.setItem("address", address);
-    localStorage.setItem("postalCode", postalCode);
+    sessionStorage.setItem("email", email);
+    sessionStorage.setItem("username", username);
+    sessionStorage.setItem("firstName", firstName);
+    sessionStorage.setItem("lastName", lastName);
+    sessionStorage.setItem("address", address);
+    sessionStorage.setItem("postalCode", postalCode);
     setSuccessMessage("Information set successfully!");
   };
 

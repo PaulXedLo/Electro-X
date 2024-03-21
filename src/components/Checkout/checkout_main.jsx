@@ -11,9 +11,9 @@ export default function CheckoutMain({}) {
   const [estimatedDeliveryDate, setEstimatedDeliveryDate] = useState("");
 
   useEffect(() => {
-    const storedFirstName = localStorage.getItem("firstName") || "";
-    const storedLastName = localStorage.getItem("lastName") || "";
-    const storedAddress = localStorage.getItem("address") || "";
+    const storedFirstName = sessionStorage.getItem("firstName") || "";
+    const storedLastName = sessionStorage.getItem("lastName") || "";
+    const storedAddress = sessionStorage.getItem("address") || "";
     setFirstName(storedFirstName);
     setLastName(storedLastName);
     setAddress(storedAddress);

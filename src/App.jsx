@@ -13,7 +13,7 @@ function App() {
   const [totalPrice, setTotalPrice] = useState(0);
 
   useEffect(() => {
-    const token = localStorage.getItem("token");
+    const token = sessionStorage.getItem("token");
     if (token) {
       setIsSignedIn(true);
       setDiscount(true);
@@ -23,14 +23,14 @@ function App() {
     }
   }, []);
   const handleLogout = () => {
-    localStorage.removeItem("token");
-    localStorage.removeItem("username");
-    localStorage.removeItem("email");
-    localStorage.removeItem("password");
-    localStorage.removeItem("address");
-    localStorage.removeItem("postalCode");
-    localStorage.removeItem("firstName");
-    localStorage.removeItem("lastName");
+    sessionStorage.removeItem("token");
+    sessionStorage.removeItem("username");
+    sessionStorage.removeItem("email");
+    sessionStorage.removeItem("password");
+    sessionStorage.removeItem("address");
+    sessionStorage.removeItem("postalCode");
+    sessionStorage.removeItem("firstName");
+    sessionStorage.removeItem("lastName");
     window.location.reload();
   };
   return (

@@ -17,7 +17,7 @@ export default function Dashboard({ handleLogout }) {
           alt="The Icon of the account"
           className="profile_image"
         />
-        <h1 className="username">{localStorage.getItem("username")}</h1>
+        <h1 className="username">{sessionStorage.getItem("username")}</h1>
         <ul className="options">
           <li
             onClick={() => handleOptionClick("Change Password")}
