@@ -1,9 +1,11 @@
 import { Link } from "react-router-dom";
-
 export default function Navigation({ isSignedIn, handleLogout }) {
   return (
     <div className="navbar-ol">
       <nav className="navbar">
+        <a className="navbar_logo_header" href="/Electro-X">
+          ElectroX
+        </a>
         <ul className="navbar-list">
           <li>
             <Link to="/">Home</Link>
