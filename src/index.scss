@@ -504,6 +504,7 @@ h3.delivery {
     position: absolute;
     bottom: 0;
   }
+
   .product-sort {
     border-bottom: 0;
   }
@@ -547,6 +548,9 @@ h3.delivery {
   #search-btn {
     display: none;
   }
+  #overlay h5 {
+    font-size: 0.5rem;
+  }
 }
 @media (max-width: 1880px) {
   .product-item {
@@ -575,6 +579,12 @@ h3.delivery {
   }
   .scroll {
     display: none;
+  }
+  #read_more {
+    color: black;
+    &:hover {
+      background-color: lightgray;
+    }
   }
   #accordion-flush {
     width: 60rem;
@@ -639,6 +649,9 @@ h3.delivery {
   #overlay {
     width: 100%;
   }
+  #overlay h5 {
+    font-size: 1.2rem;
+  }
   .confirmation-content p {
     font-size: 1.2rem;
     text-align: center;
@@ -654,6 +667,15 @@ h3.delivery {
   .quantity {
     flex-direction: row;
     gap: 0.7rem;
+  }
+  .modalmain img {
+    width: 20.5rem;
+  }
+  #overlay span {
+    font-size: 2rem;
+  }
+  #overlay ul li span {
+    font-size: 1rem;
   }
   .totalpricebox {
   }
@@ -675,6 +697,7 @@ h3.delivery {
   align-items: center;
   justify-content: center;
   text-align: center;
+
   gap: 2rem;
 }
 

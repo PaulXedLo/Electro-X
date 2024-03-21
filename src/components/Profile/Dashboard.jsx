@@ -1,6 +1,7 @@
 import { useState } from "react";
 import ChangePassword from "./ChangePassword";
 import EditInformation from "./EditInformation";
+import profileIcon from "./images/profileImage.svg";
 export default function Dashboard({ handleLogout }) {
   const [selectedOption, setSelectedOption] = useState("");
 
@@ -12,7 +13,7 @@ export default function Dashboard({ handleLogout }) {
     <div className="account_dashboard">
       <div className="account_menu">
         <img
-          src="./profile_icon.svg"
+          src={profileIcon}
           alt="The Icon of the account"
           className="profile_image"
         />

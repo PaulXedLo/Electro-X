@@ -7,7 +7,7 @@
   align-items: center;
   flex-direction: row;
 }
-.slick-slider {
+.slider__comp {
   position: relative;
   margin-left: 8.3rem;
 }
@@ -107,7 +107,6 @@
     z-index: 9999;
   }
 }
-
 @media (max-width: 1185px) {
   .product__component {
     flex-direction: column;
@@ -127,11 +126,19 @@
   }
   .product__info {
     margin-top: -6.25rem;
+    font-size: 1rem;
   }
   .product__name {
     font-size: 1.6rem;
   }
+
   .product__nameandrating {
     text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .product__info {
+    font-size: 0.5rem;
   }
 }
